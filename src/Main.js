@@ -1,7 +1,5 @@
 import { useState } from "react";
 import Meals from "./components/Meals/Meals";
-
-import CartProvider from "./store/CartProvider";
 import MealDetail from "./components/MealDetail/MealDetail";
 
 function Main() {
