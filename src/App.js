@@ -17,6 +17,8 @@ const App = () => {
           <Route path="/" element={<Main />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="settings" element={<Settings />}>
+            <Route index element={<ItemManagement />} />{" "}
+            {/* default setting page */}
             <Route path="management" element={<ItemManagement />} />
             <Route path="metrics" element={<Metrics />} />
           </Route>
