@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import { useState } from "react";
 import Cart from "../Cart/Cart";
 import Header from "../Layout/Header";
@@ -12,6 +12,16 @@ export default function Navigation() {
   const hideCartHandler = () => {
     setCartIsShown(false);
   };
+  // To make Settings nav keep active when choose its child router
+  // The goal to do this is to keep the Settings to be active when we are in its children view.
+  function isPathActive(currentPath, linkPath) {
+    if (linkPath === "/") {
+      return currentPath === linkPath;
+    }
+    return currentPath.startsWith(linkPath);
+  }
+
+  const location = useLocation();
 
   return (
     <div>
@@ -33,9 +43,9 @@ export default function Navigation() {
         </NavLink>
         <NavLink
           to="/settings"
-          className={({ isActive }) =>
+          className={() =>
             `px-3 py-2 rounded-md ${
-              isActive
+              isPathActive(location.pathname, "/settings")
                 ? "bg-red-500 text-white"
                 : "text-gray-700 hover:bg-gray-200"
             }`
