@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.361471bb.css",
-    "main.js": "/static/js/main.b7c1b36d.js",
-    "static/media/meals.jpg": "/static/media/meals.2971f633fc1382581cbf.jpg",
-    "index.html": "/index.html",
-    "main.361471bb.css.map": "/static/css/main.361471bb.css.map",
-    "main.b7c1b36d.js.map": "/static/js/main.b7c1b36d.js.map"
+    "main.css": "/ReachOnlineStore/static/css/main.361471bb.css",
+    "main.js": "/ReachOnlineStore/static/js/main.f9a57eee.js",
+    "static/media/meals.jpg": "/ReachOnlineStore/static/media/meals.2971f633fc1382581cbf.jpg",
+    "index.html": "/ReachOnlineStore/index.html",
+    "main.361471bb.css.map": "/ReachOnlineStore/static/css/main.361471bb.css.map",
+    "main.f9a57eee.js.map": "/ReachOnlineStore/static/js/main.f9a57eee.js.map"
   },
   "entrypoints": [
     "static/css/main.361471bb.css",
-    "static/js/main.b7c1b36d.js"
+    "static/js/main.f9a57eee.js"
   ]
 }
