@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ReachOnlineStore/static/css/main.361471bb.css",
+    "main.js": "/ReachOnlineStore/static/js/main.35810d06.js",
+    "static/media/meals.jpg": "/ReachOnlineStore/static/media/meals.2971f633fc1382581cbf.jpg",
+    "index.html": "/ReachOnlineStore/index.html",
+    "main.361471bb.css.map": "/ReachOnlineStore/static/css/main.361471bb.css.map",
+    "main.35810d06.js.map": "/ReachOnlineStore/static/js/main.35810d06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.361471bb.css",
+    "static/js/main.35810d06.js"
+  ]
+}
