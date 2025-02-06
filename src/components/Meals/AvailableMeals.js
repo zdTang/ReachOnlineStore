@@ -4,8 +4,8 @@ import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 import img1 from "../../assets/meal/sushi.jpg";
 import img2 from "../../assets/meal/schnitzel.jpg";
-import img3 from "../../assets/meal/barbecue-burger.jpg";
-import img4 from "../../assets/meal/green-bowl.jpg";
+import img3 from "../../assets/meal/barbecueburger.jpg";
+import img4 from "../../assets/meal/greenbowl.jpg";
 
 const meals = [
   {
