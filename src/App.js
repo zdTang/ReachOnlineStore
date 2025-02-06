@@ -8,7 +8,7 @@ import CartProvider from "./store/CartProvider";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ReachOnlineStore">
       <CartProvider>
         <Navigation />
         <Routes>

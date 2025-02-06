@@ -38,5 +38,6 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.16"
-  }
+  },
+  "homepage": "https://zdTang.github.io/ReachOnlineStore"
 }
