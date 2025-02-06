@@ -1,30 +1,55 @@
 import React from "react";
+import { NavLink, Outlet, useLocation } from "react-router";
+
+function isSettingsRouteActive(currentPath) {
+  return currentPath.startsWith("/settings");
+}
+
+function isDefaultNavLinkActive(currentPath) {
+  return currentPath === "/settings" || currentPath === "/settings/management";
+}
 
 const Settings = () => {
+  const location = useLocation();
+  const isSettingsActive = isSettingsRouteActive(location.pathname);
+
   return (
-    <div>
-      <h1>Coming Soon!</h1>
-      <p>
-        I am working on the full version of this page, but here's a preview of
-        what you can expect:
-      </p>
-      <ul>
-        <li>
-          {" "}
-          Product Data Management: A user-friendly interface for administrators
-          to easily update and maintain detailed product information.
-        </li>
-        <li>
-          {" "}
-          Profit Analytics Dashboard: Interactive charts and reports providing
-          clear visualizations of profit performance.
-        </li>
-        <li>
-          Customizable Reporting Periods: The ability to analyze profit outcomes
-          over various time periods
-        </li>
-      </ul>
-      <p>I appreciate your patience. Check back in a few weeks!</p>
+    <div className="flex">
+      <nav
+        className={`bg-gray-100 flex flex-col items-end p-5  mt-10 ${
+          isSettingsActive ? "active-settings-nav" : ""
+        }`}
+      >
+        <NavLink
+          to="management"
+          className={() =>
+            ` px-3 py-2 rounded-md mb-5 ${
+              isDefaultNavLinkActive(location.pathname)
+                ? "bg-red-500 text-white"
+                : "text-gray-700 hover:bg-gray-200"
+            }`
+          }
+        >
+          Items
+        </NavLink>
+        <NavLink
+          to="metrics"
+          className={({ isActive }) =>
+            ` px-3 py-2 rounded-md ${
+              isActive
+                ? "bg-red-500 text-white"
+                : "text-gray-700 hover:bg-gray-200"
+            }`
+          }
+        >
+          Metrics
+        </NavLink>
+      </nav>
+      <main className="flex-1">
+        {" "}
+        {/* Take the remaining space */}
+        <Outlet />
+      </main>
     </div>
   );
 };

@@ -30,13 +30,13 @@ const MealItem = (props) => {
           onClick={() =>
             props.onShowMealDetail({
               name: props.name,
-              src: `/meal/${props.img}.jpg`,
+              src: props.img,
               des: props.description,
               price,
             })
           }
-          src={`/meal/${props.img}.jpg`}
-          alt={props.img}
+          src={props.img}
+          alt={props.name}
         />
       </div>
       <div>

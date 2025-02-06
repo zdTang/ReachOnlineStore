@@ -5,6 +5,8 @@ import Settings from "./components/Settings/Settings";
 import Navigation from "./components/UI/Navigation";
 import Main from "./Main";
 import CartProvider from "./store/CartProvider";
+import ItemManagement from "./components/Settings/ItemManagement";
+import Metrics from "./components/Settings/Metrics";
 
 const App = () => {
   return (
@@ -14,7 +16,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="about" element={<AboutUs />} />
-          <Route path="settings" element={<Settings />} />
+          <Route path="settings" element={<Settings />}>
+            <Route index element={<ItemManagement />} />{" "}
+            {/* default setting page */}
+            <Route path="management" element={<ItemManagement />} />
+            <Route path="metrics" element={<Metrics />} />
+          </Route>
         </Routes>
       </CartProvider>
     </BrowserRouter>
