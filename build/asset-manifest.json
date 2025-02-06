@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.711a81f7.css",
+    "main.js": "/static/js/main.ed36f065.js",
+    "static/media/greenbowl.jpg": "/static/media/greenbowl.b63ce8332c78a84f7ce5.jpg",
+    "static/media/meals.jpg": "/static/media/meals.2971f633fc1382581cbf.jpg",
+    "static/media/barbecueburger.jpg": "/static/media/barbecueburger.3128f70daa3a8fc266c1.jpg",
+    "static/media/sushi.jpg": "/static/media/sushi.57edceeb7c8bb90342aa.jpg",
+    "static/media/schnitzel.jpg": "/static/media/schnitzel.86e1a66fa323fbf15cfa.jpg",
+    "index.html": "/index.html",
+    "main.711a81f7.css.map": "/static/css/main.711a81f7.css.map",
+    "main.ed36f065.js.map": "/static/js/main.ed36f065.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.711a81f7.css",
+    "static/js/main.ed36f065.js"
+  ]
+}

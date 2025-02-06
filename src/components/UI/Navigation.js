@@ -2,7 +2,7 @@ import { NavLink, useLocation } from "react-router";
 import { useState } from "react";
 import Cart from "../Cart/Cart";
 import Header from "../Layout/Header";
-import MealsSummary from "../Meals/MealsSummary";
+// import MealsSummary from "../Meals/MealsSummary";
 export default function Navigation() {
   const [cartIsShown, setCartIsShown] = useState(false);
   const showCartHandler = () => {
@@ -68,7 +68,7 @@ export default function Navigation() {
           Find Us
         </NavLink>
       </nav>
-      <MealsSummary />
+      {/* <MealsSummary /> */}
     </div>
   );
 }
