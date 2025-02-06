@@ -27,7 +27,7 @@ export default function Navigation() {
     <div>
       {cartIsShown && <Cart onClose={hideCartHandler} />}
       <Header onShowCart={showCartHandler} />
-      <nav className="bg-gray-100 py-6 px-6 flex justify-end space-x-4">
+      <nav className="bg-gray-100 py-2 px-6 flex justify-end space-x-4">
         <NavLink
           to="/"
           className={({ isActive }) =>
