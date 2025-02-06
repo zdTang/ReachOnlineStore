@@ -8,6 +8,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Required for pushing back to the repository
+      pages: write # Required for GitHub Pages deployment (if applicable)
+      id-token: write # Required for some external deployment providers
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
