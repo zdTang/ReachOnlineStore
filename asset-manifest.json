@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/ReachOnlineStore/static/css/main.cdb08857.css",
-    "main.js": "/ReachOnlineStore/static/js/main.ec5def9e.js",
+    "main.css": "/ReachOnlineStore/static/css/main.595756d1.css",
+    "main.js": "/ReachOnlineStore/static/js/main.ad9ba031.js",
     "static/media/greenbowl.jpg": "/ReachOnlineStore/static/media/greenbowl.b63ce8332c78a84f7ce5.jpg",
     "static/media/meals.jpg": "/ReachOnlineStore/static/media/meals.2971f633fc1382581cbf.jpg",
     "static/media/barbecueburger.jpg": "/ReachOnlineStore/static/media/barbecueburger.3128f70daa3a8fc266c1.jpg",
     "static/media/sushi.jpg": "/ReachOnlineStore/static/media/sushi.57edceeb7c8bb90342aa.jpg",
     "static/media/schnitzel.jpg": "/ReachOnlineStore/static/media/schnitzel.86e1a66fa323fbf15cfa.jpg",
     "index.html": "/ReachOnlineStore/index.html",
-    "main.cdb08857.css.map": "/ReachOnlineStore/static/css/main.cdb08857.css.map",
-    "main.ec5def9e.js.map": "/ReachOnlineStore/static/js/main.ec5def9e.js.map"
+    "main.595756d1.css.map": "/ReachOnlineStore/static/css/main.595756d1.css.map",
+    "main.ad9ba031.js.map": "/ReachOnlineStore/static/js/main.ad9ba031.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdb08857.css",
-    "static/js/main.ec5def9e.js"
+    "static/css/main.595756d1.css",
+    "static/js/main.ad9ba031.js"
   ]
 }
