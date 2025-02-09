@@ -10,7 +10,7 @@ import Metrics from "./components/Settings/Metrics";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ReachOnlineStore">
       <CartProvider>
         <Navigation />
         <Routes>
