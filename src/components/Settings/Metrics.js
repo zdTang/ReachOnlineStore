@@ -82,6 +82,7 @@ export default class Metrics extends PureComponent {
             activeDot={{ r: 8 }}
           />
           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="amt" stroke="red" />
         </LineChart>
       </div>
     );
