@@ -2,10 +2,10 @@ import { useContext } from "react";
 
 import MealItemForm from "./MealItemForm";
 import CartContext from "../../../store/cart-context";
-
+import { MealDetailContext } from "../../../Main";
 const MealItem = (props) => {
   const cartCtx = useContext(CartContext);
-
+  const showMealDetailHandler = useContext(MealDetailContext);
   const price = `$${props.price.toFixed(2)}`;
 
   const addToCartHandler = (amount) => {
@@ -28,7 +28,7 @@ const MealItem = (props) => {
         <img
           className="transition-all duration-200 ease-in-out cursor-pointer active:scale-95 active:shadow-inner h-[150px] w-[200px] object-cover"
           onClick={() =>
-            props.onShowMealDetail({
+            showMealDetailHandler({
               name: props.name,
               src: props.img,
               des: props.description,

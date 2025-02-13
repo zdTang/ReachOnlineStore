@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import Meals from "./components/Meals/Meals";
 import MealDetail from "./components/MealDetail/MealDetail";
+
+const MealDetailContext = createContext(null);
 
 function Main() {
   const [mealDetailIsShown, setMealDetailShown] = useState(false);
@@ -20,12 +22,11 @@ function Main() {
       {mealDetailIsShown && (
         <MealDetail onClose={hideMealDetailHandler} detail={detail} />
       )}
-
-      <main>
-        <Meals onShowMealDetail={showMealDetailHandler} />
-      </main>
+      <MealDetailContext.Provider value={showMealDetailHandler}>
+        <Meals />
+      </MealDetailContext.Provider>
     </div>
   );
 }
-
+export { MealDetailContext };
 export default Main;

@@ -95,7 +95,6 @@ const AvailableMeals = (props) => {
 
   const mealsList = meals.map((meal) => (
     <MealItem
-      onShowMealDetail={props.onShowMealDetail}
       key={meal.id}
       id={meal.id}
       name={meal.name}
