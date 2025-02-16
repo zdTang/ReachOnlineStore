@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../../store/index";
-
+import { IoIosArrowForward, IoIosArrowDown } from "react-icons/io";
 export default function ItemForm() {
   const dispatch = useDispatch();
 
@@ -22,7 +22,8 @@ export default function ItemForm() {
   });
 
   const [errors, setErrors] = useState({});
-
+  // State to manage form visibility
+  const [formVisible, setFormVisible] = useState(false);
   const validate = () => {
     let newErrors = {};
 
@@ -54,34 +55,42 @@ export default function ItemForm() {
       formData.id = crypto.randomUUID(); // give it an unique id
       setFormData({ name: "", quantity: "", price: "" });
       dispatch(addItemToCart(formData));
+      //setFormVisible(false); // Hide the form after submission
     }
   };
 
   return (
     <>
-      <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-xl font-semibold mb-4">Product Form</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Name Input */}
-          <div>
-            <label className="block font-medium">Name:</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full p-2 border rounded-md focus:ring focus:ring-blue-300"
-            />
-            {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name}</p>
-            )}
-          </div>
+      {/* Button to toggle form visibility */}
+      {/* Button to toggle form visibility */}
+      <button
+        onClick={() => setFormVisible((prev) => !prev)} // Toggle form visibility
+        className="bg-blue-500 text-white p-2 rounded flex items-center justify-between w-48"
+      >
+        <span>{formVisible ? "Hide Form" : "Add Item"}</span>
+        {/* Icon placed on the right with some margin between the text */}
+        <span className="ml-2">
+          {formVisible ? <IoIosArrowDown /> : <IoIosArrowForward />}
+        </span>
+      </button>
+
+      {/* Conditionally render the form based on formVisible */}
+      {formVisible && (
+        <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full p-2 border rounded-md focus:ring focus:ring-blue-300"
+          />
+          {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
 
           {/* Quantity Input */}
           <div>
             <label className="block font-medium">Quantity:</label>
             <input
-              type="text"
+              type="number"
               name="quantity"
               value={formData.quantity}
               onChange={handleChange}
@@ -96,11 +105,13 @@ export default function ItemForm() {
           <div>
             <label className="block font-medium">Price:</label>
             <input
-              type="text"
+              type="number"
+              step="0.01"
               name="price"
               value={formData.price}
               onChange={handleChange}
-              className="w-full p-2 border rounded-md focus:ring focus:ring-blue-300"
+              placeholder="Enter Price"
+              className="border p-2 w-full"
             />
             {errors.price && (
               <p className="text-red-500 text-sm">{errors.price}</p>
@@ -115,7 +126,7 @@ export default function ItemForm() {
             Submit
           </button>
         </form>
-      </div>
+      )}
 
       <div className="table-header">
         <h3 className="subtitle is-3">Items</h3>
